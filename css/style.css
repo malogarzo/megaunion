@@ -1,0 +1,1200 @@
+/* ----------------------------------------------------------------
+
+ == Table Of Content
+
+	01 Basic
+	02 Buttons
+	03 Navbar
+	04 Header
+  05 About Us
+  06 Knowledge
+  07 get-ready
+  08 Services
+	09 Numbers
+  10 Portfolio
+  11 Team
+	12 Video Intro
+	13 Price
+  14 Testimonails
+  15 Newsletter
+	16 Blog
+	17 Clients
+	18 Contact
+	19 Footer
+	20 Responsive
+
+---------------------------------------------------------------- */
+/* ----------------------------------------------------------------
+  01 Start Basic 
+-----------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none !important;
+    list-style: none;
+  }
+  
+  body {
+    color: #00000a;
+    line-height: 1.3;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Franklin', sans-serif;
+  }
+  
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9a9a9a;
+    line-height: 1.6;
+    word-spacing: 1px;
+    margin: 0;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  span, a, a:hover {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .ti-section-padding {
+    padding: 80px 0;
+  }
+  
+  .ti-heading {
+    margin-bottom: 50px;
+  }
+  .ti-heading h6 {
+    font-size: 11px;
+    font-weight: 500;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    word-spacing: 1px;
+    display: inline-block;
+    position: relative;
+  }
+  .ti-heading h4 {
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: .7;
+    position: relative;
+    padding: 20px 0;
+  }
+  .ti-heading h4 span{
+    color: #e30613;
+  }
+  .bg-theme {
+    background: #e30613;
+  }
+  .bg-gray {
+    background: #f7f7f7;
+  }
+  .bg-gray .owl-theme .owl-dots .owl-dot span {
+    background: #777;
+  }
+  
+  .o-hidden {
+    overflow: hidden;
+  }
+  
+  .position-re {
+    position: relative;
+  }
+  
+  .full-width {
+    width: 100% !important;
+  }
+  
+  .bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+  
+  .valign {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .v-middle {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+  }
+
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 50px;
+    line-height: .7;
+  }
+  
+  .owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 0 7px;
+    border-radius: 50%;
+    background: #ddd;
+  }
+  
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #e30613;
+  }
+  
+  /* ----------------------------------------------------------------
+    01 End Basic 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    02 Start Buttons 
+  -----------------------------------------------------------------*/
+  .ti-button {
+    padding: 10px 30px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    margin: 30px 2px 0;
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+  }
+  .ti-button::after{
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+  }
+  .ti-button:hover {
+    border-color: #fff;
+  }
+  .ti-button:hover:after {
+    height: 101%;
+    width: 135%;
+  }
+  .ti-button:hover span {
+    color: #e30613;
+  }
+  .ti-button span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .ti-button-bg {
+    background: #e30613;
+    border-color: #e30613;
+    color: #fff;
+    z-index: 0;
+  }
+  .ti-button-bord {
+    z-index: 0;
+  }
+  .ti-button-bord:after {
+    background: #e30613;
+  }
+  .ti-button-bord:hover {
+    border-color: #e30613;
+  }
+  .ti-button-bord:hover span {
+    color: #fff;
+  }
+
+  .ti-video-button {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    background: #e30613;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+  }
+  .ti-video-button::after{
+    content: '';
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+  }
+  .ti-video-button:hover {
+    color: #e30613;
+  }
+  .ti-video-button:hover:after {
+    height: 100%;
+    width: 200%;
+  }
+
+  
+  /* ----------------------------------------------------------------
+    02 End Buttons 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    03 Start Navbar 
+  -----------------------------------------------------------------*/
+  .navbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 9;
+    min-height: 80px;
+  }
+  .navbar .ti-nav-icon {
+    color: #fff;
+  }
+  .navbar .navbar-nav .nav-link {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #eee;
+    letter-spacing: .5px;
+    margin: 15px 5px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .navbar .navbar-nav .active {
+    color: #e30613 !important;
+  }
+  
+  .nav-scroll {
+    background: #fff;
+    border-bottom: 1px solid rgba(12, 12, 12, 0.04);
+    box-shadow: 0 10px 25px -15px #999;
+    padding: 0;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  .nav-scroll .ti-nav-icon {
+    color: #222;
+  }
+  .nav-scroll .navbar-nav .nav-link {
+    color: #222;
+  }
+  .nav-scroll .navbar-nav .ti-logo {
+    padding: 15px 0;
+    color: #111;
+  }
+  .ti-logo {
+    padding: 15px 0;
+    width: 300px;
+  }
+  
+  /* ----------------------------------------------------------------
+    03 End Navbar 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    04 Start Header 
+  -----------------------------------------------------------------*/
+  .ti-header {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .ti-header .caption .o-hidden {
+    display: inline-block;
+  }
+  .ti-header .caption h4 {
+    font-weight: 200;
+    letter-spacing: 4px;
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
+  }
+  .ti-header .caption h1 {
+    margin: 10px 0;
+    font-size: 60px;
+    font-weight: 500;
+    font-family: inherit;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    -webkit-animation-delay: .6s;
+            animation-delay: .6s;
+  }
+  .ti-header .caption p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #eee;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  /* ----------------------------------------------------------------
+    04 End Header 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    05 Start About Us 
+  -----------------------------------------------------------------*/
+  .ti-about-us h6 {
+    font-size: 20px;
+  }
+  .ti-about-us h6 span {
+    color: #e30613;
+  }
+  .ti-about-us .ti-feature-box {
+    padding: 25px;
+  }
+  .ti-about-us .ti-features .ti-feature-img img,
+  .ti-about-us .ti-features [data-overlay-dark]::before{
+    border-radius: 6px;
+  }
+  .ti-about-us .ti-feature-box .ti-feature-icon {
+    font-size: 40px;
+    margin: 15px 24px 0 0;
+    color: #e30613;
+    float: left;
+  }
+  .ti-about-us .ti-feature-box h6 {
+    margin-bottom: 12px;
+  }
+  .ti-about-us .ti-feature-box p {
+    overflow: hidden;
+  }
+  .ti-feature-video {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    right: auto;
+    bottom: auto;
+  }
+  .ti-about-us .list {
+    overflow: hidden;
+  }
+  .ti-about-us .list li {
+    float: left;
+    margin-top: 15px;
+    color: #9a9a9a;
+  }
+  .ti-about-us .list li i {
+    margin-right: 5px;
+    color: #e30613;
+  }
+
+  /* ----------------------------------------------------------------
+    05 End About Us 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    06 Start Knowledge 
+  -----------------------------------------------------------------*/  
+  .ti-knowledge img{
+    border-radius: 6px;
+  }
+  .ti-knowledge .ti-skills {
+    margin-top: 30px;
+    z-index: 2;
+  }
+  .ti-knowledge .ti-skills .ti-skill {
+    margin-bottom: 20px;
+  }  
+  .ti-knowledge .ti-skills .ti-skill:last-child {
+    margin-bottom: 0; 
+  }
+  .ti-knowledge .ti-skills .ti-skill h6 {
+    font-size: 12px;
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    padding-top: 2px;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .ti-knowledge .ti-skills .ti-skill .ti-skill-progress {
+    width: 100%;
+    height: 5px;
+    background:#f7f7f7;
+    border-radius: 5px;
+    position: relative; 
+  }
+  .ti-knowledge .ti-skills .ti-skill .ti-skill-progress div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10%;
+    border-radius: 50px;
+    padding: 0 10px 0;
+    background-color: #e30613;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .ti-knowledge .ti-skills .ti-skill .ti-skill-progress div:after {
+    content: attr(data-value);
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 11px;
+    color: #fff; 
+  }
+  /* ----------------------------------------------------------------
+    06 End Knowledge 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    07 Start get-ready 
+  -----------------------------------------------------------------*/
+  .ti-get-ready h6 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    word-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .ti-get-ready h2 {
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .ti-get-ready1 .ti-button {
+    margin-top: 0px;
+  }
+  .ti-get-ready1 .ti-button::after {
+    z-index: 1;
+  }
+  
+  /* ----------------------------------------------------------------
+    07 End get-ready 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    08 Start services 
+  -----------------------------------------------------------------*/
+  .ti-services .ti-service-box {
+    padding: 30px;
+  }
+  .ti-services .ti-service-box .ti-service-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #e30613;
+  }
+  .ti-services .ti-service-box h6 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  
+  /* ----------------------------------------------------------------
+    08 End services 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    09 Start Numbers 
+  -----------------------------------------------------------------*/
+  .ti-numbers {
+    background-attachment: fixed;
+  }
+  .ti-numbers .ti-number .ti-number-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 50px;
+    color: #e30613;
+    position: relative;
+    overflow: hidden;
+  }
+  .ti-numbers .ti-number h3 {
+    font-weight: 600;
+    font-family: inherit;
+    margin-bottom: 15px;
+  }
+  .ti-numbers .ti-number h6 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* ----------------------------------------------------------------
+    09 End Numbers 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    10 Start Portfolio 
+  -----------------------------------------------------------------*/
+  .ti-portfolio {
+    overflow: hidden;
+  }
+  .ti-portfolio .ti-portfolio-filter span {
+    padding: 9px 30px;
+    letter-spacing: 1px;
+    background: #f5f5f5;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .ti-portfolio .ti-portfolio-filter span:first-child {
+    border-radius: 100px 0 0 100px;
+  }
+  .ti-portfolio .ti-portfolio-filter span:last-child {
+    border-radius: 0 100px 100px 0;
+  }
+  .ti-portfolio .ti-portfolio-filter .active {
+    background: #e30613;
+    color: #fff;
+    -webkit-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.2);
+  }
+  .ti-portfolio .ti-portfolio-items {
+    padding: 0;
+  }
+  .ti-portfolio .ti-portfolio-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .ti-portfolio .ti-portfolio-item:hover .ti-portfolio-overlay {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .ti-portfolio .ti-portfolio-item:hover h6 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .ti-portfolio .ti-portfolio-item h6 {
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 15px;
+    -webkit-transform: translateY(-55px);
+            transform: translateY(-55px);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .ti-portfolio .ti-portfolio-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    color: #35424C;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    z-index: 2;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  .ti-portfolio .ti-portfolio-overlay .ti-portfolio-content {
+    top: 50%;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }  
+  /* ----------------------------------------------------------------
+    10 End Portfolio 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    11 Start Team 
+  -----------------------------------------------------------------*/
+  .ti-team .ti-team-member .ti-team-member-img {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+  }
+  .ti-team .ti-team-member .ti-team-member-img:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .ti-team .ti-team-member img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .ti-team .ti-team-member-info {
+    margin: 20px 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ti-team .ti-team-member-info h6 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: inherit;
+    margin-bottom: 10px;
+  }
+  .ti-team .ti-team-member-info span {
+    font-size: 14px;
+    color: #959595;
+  }
+  .ti-team .ti-team-member:hover .ti-team-member-info h6{
+    color: #e30613;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ti-team .ti-team-member .ti-team-member-social {
+    width: 20%;
+    height: 100%;
+    padding: 50px 0;
+    margin: 0;
+    top: 0;
+    left: -50%;
+    position: absolute; 
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    background-color: #e30613;
+  }
+  .ti-team .ti-team-member .ti-team-member-img:hover .ti-team-member-social {
+    left: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ti-team .ti-team-member-img .ti-team-member-social li{
+    display: block;
+  }
+  .ti-team .ti-team-member-img .ti-team-member-social li a{
+    position: relative;
+    display: block;
+    width: auto;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+  }
+  .ti-team .ti-team-member-img .ti-team-member-social li a:hover{
+    color: #222;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  
+  /* ----------------------------------------------------------------
+    11 End Team 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    12 Start Video Intro 
+  -----------------------------------------------------------------*/
+  .video-intro h6 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    word-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .video-intro h2 {
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .video-intro .vid-ti-button {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    background: #e30613;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .video-intro .vid-ti-button::after{
+    content: '';
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+  }
+  .video-intro .vid-ti-button:hover {
+    color: #e30613;
+  }
+  .video-intro .vid-ti-button:hover:after {
+    height: 100%;
+    width: 200%;
+  }
+  
+  /* ----------------------------------------------------------------
+    12 End Video Intro 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    13 Start Price 
+  -----------------------------------------------------------------*/
+  .ti-price .ti-price-box {
+    padding: 30px 0;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .ti-price .ti-price-box.active {
+    -webkit-box-shadow: 0 3px 30px -7px #888;
+            box-shadow: 0 3px 30px -7px #888;
+  }
+  .ti-price .ti-price-type {
+    margin-bottom: 30px;
+  }
+  .ti-price .ti-price-type h4 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .ti-price .ti-price-amount {
+    padding: 30px 0;
+    position: relative;
+    background: #f5f5f5;
+  }
+  .ti-price .ti-price-box.active .ti-price-amount {
+    background: #e30613;
+    color: #fff;
+  }
+  .ti-price .ti-price-box.active .ti-price-amount .ti-price-amount-per {
+    color: #fff;
+  }
+  .ti-price .ti-price-amount h3 {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 800;
+    position: relative;
+  }
+  .ti-price .ti-price-amount h3 span {
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin-left: -15px;
+  }
+  .ti-price .ti-price-amount .ti-price-amount-per {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+  }
+  .ti-price .ti-price-features {
+    padding: 15px 0;
+  }
+  .ti-price .ti-price-features li {
+    margin: 15px 0;
+    color: #777;
+  }
+  .ti-price .ti-price-order {
+    padding-top: 15px;
+    position: relative;
+  }
+  .ti-price .ti-price-order:before {
+    content: '';
+    background: #eee;
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    left: 15%;
+    top: 0;
+  }
+  .ti-price .ti-price-order .ti-button {
+    overflow: hidden;
+  }
+  .ti-price .ti-price-order .ti-button:hover {
+    border-color: #e30613;
+  }
+  .ti-price .ti-price-order .ti-button-bord {
+    border: 1px solid #e30613;
+    color: #e30613;
+  }
+  
+  /* ----------------------------------------------------------------
+    13 End Price 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    14 Start Testimonails 
+  -----------------------------------------------------------------*/
+  .ti-testimonails {
+    padding: 120px 0;
+  }
+  .ti-testimonails .ti-testimonail-box .ti-testimonail-content {
+    float: left;
+    text-align: left;
+  }
+  .ti-testimonails .ti-testimonail-box .ti-testimonail-content img{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+  }
+  .ti-testimonails .ti-testimonail-box .ti-testimonail-content h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5px;
+    color: #e30613;
+  }
+  .ti-testimonails .ti-testimonail-box .ti-testimonail-content span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  /* ----------------------------------------------------------------
+    14 End Testimonails 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    15 Newsletter 
+  -----------------------------------------------------------------*/
+  .ti-newsletter p{
+    color: #fff;
+  }
+  .ti-newsletter .form-control {
+    padding: 8px 0px 7px 60px;
+    font-size: 15px;
+  }
+  .ti-newsletter .ti-newsletter-box:before {
+    content: '\efe5';
+    font-family: 'icofont';
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    color: #ccc;
+    font-size: 22px;
+    z-index: 5;
+  }
+  .ti-newsletter .form-control:focus {
+    border-color:#ccc !important;
+    box-shadow: none;
+  }
+  .ti-newsletter .ti-button {
+    margin-top: 0px;
+    margin-left: -1px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: 5;
+    padding: 12px 30px;
+  }
+  .ti-newsletter .ti-button::after{
+    left: -40%;
+  }
+  .ti-newsletter .ti-button:hover::after {
+    width: 140%;
+  }
+  /* ----------------------------------------------------------------
+    15 End Newsletter 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    16 Start Blog 
+  -----------------------------------------------------------------*/
+  .ti-blog .ti-blog-item {
+    -webkit-box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
+            box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
+    border-radius: 5px;
+  }
+  .ti-blog .ti-blog-item .ti-blog-img {
+    position: relative;
+    overflow: hidden;
+  }
+  .ti-blog .ti-blog-item .ti-blog-img:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .ti-blog .ti-blog-item .ti-blog-img img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .ti-blog .ti-blog-item .ti-blog-content {
+    padding: 40px 20px;
+    background: #fff;
+    position: relative;
+  }
+  .ti-blog .ti-blog-item .ti-blog-content .ti-blog-date,
+  .ti-blog .ti-blog-item .ti-blog-content .ti-blog-user {
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .ti-blog .ti-blog-item .ti-blog-content h5 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  } 
+  .ti-blog .ti-blog-item .ti-blog-content h5:hover, 
+  .ti-blog .ti-blog-item:hover .ti-blog-content h5,
+  .ti-blog .ti-blog-item .ti-blog-content .ti-blog-date:hover,
+  .ti-blog .ti-blog-item .ti-blog-content .ti-blog-user:hover {
+    color: #e30613;
+  }
+  .ti-blog .ti-blog-item .ti-blog-content .ti-button-bord{
+    border: 1px solid #e30613;
+    color: #e30613;
+  }
+  
+  /* ----------------------------------------------------------------
+    16 End Blog 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    17 Start Clients 
+  -----------------------------------------------------------------*/
+  .ti-clients {
+    padding: 30px 0;
+  }
+  .ti-clients .ti-client-logo {
+    padding: 15px;
+    opacity: .5;
+  }
+  .ti-clients .ti-client-logo:hover {
+    opacity: 1;
+  }
+  
+  /* ----------------------------------------------------------------
+    17 End Clients 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    18 Start Contact 
+  -----------------------------------------------------------------*/
+  .ti-contact .ti-contact-box {
+    padding: 0 5%;
+    z-index: 5;
+  }
+  .ti-contact .ti-contact-details {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin: 80px 0;
+    text-align: center;
+  }
+  .ti-contact .ti-contact-details .ti-contact-icon {
+    font-size: 30px;
+    color: #004F9F;
+    margin-bottom: 10px;
+  }
+  .ti-contact .ti-contact-details .ti-contact-info h6 {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .ti-contact .ti-contact-details .ti-contact-info p {
+    margin-bottom: 10px;
+  }
+  .ti-contact .form {
+    padding: 0 10%;
+  }
+  .ti-contact .form input, .ti-contact .form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+  }
+  .ti-contact .form .ti-button {
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .ti-contact .form .ti-button:hover {
+    border-color: #fff;
+  }
+  .ti-contact .form .has-error input,
+  .ti-contact .form .has-error select,
+  .ti-contact .form .has-error textarea{
+      border-color:red;
+  }
+  /* ----------------------------------------------------------------
+    18 End Contact 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    19 Start Footer 
+  -----------------------------------------------------------------*/
+  .ti-footer {
+    background: #111;
+    padding: 80px 0;
+  }
+  .ti-footer .ti-social a {
+    color: #777;
+    font-size: 25px;
+    margin: 15px 15px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .ti-footer .ti-social a:hover{
+    color: #e30613;
+  }
+  .ti-footer p {
+    color: #999;
+    font-weight: 400;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* ----------------------------------------------------------------
+    19 End Footer 
+  -----------------------------------------------------------------*/
+  /* ----------------------------------------------------------------
+    20 Responsive 
+  -----------------------------------------------------------------*/
+  @media screen and (max-width: 991px) {
+    .mb-md50 {
+      margin-bottom: 50px;
+    }
+  
+    .mb-md30 {
+      margin-bottom: 30px;
+    }
+  
+    .mb-md0 {
+      margin-bottom: 0;
+    }
+  
+    .bg-fixed {
+      background-attachment: scroll !important;
+    }
+  
+    .navbar {
+      padding: 0 15px;
+    }
+    .navbar .navbar-collapse {
+      background: #111;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .navbar .nav-link {
+      margin: 10px auto !important;
+    }
+  
+    .nav-scroll .navbar-collapse .nav-link {
+      color: #fff !important;
+    }
+    .nav-scroll .navbar-collapse .active {
+      color: #e30613 !important;
+    }
+  
+    .ti-header {
+      background-attachment: scroll !important;
+      background-position: 50% 0% !important;
+    }
+    .ti-header .caption h4 {
+      font-size: 30px;
+    }
+    .ti-header .caption h1 {
+      font-size: 45px;
+      line-height: 1.4;
+    }
+  
+    .video-intro h2 {
+      font-size: 35px;
+      line-height: 1.4;
+    }
+  
+    .ti-get-ready h2 {
+      font-size: 35px;
+      line-height: 1.4;
+    }
+  
+    .ti-portfolio .bg-img {
+      text-align: center;
+    }
+    .ti-portfolio .bg-img h6 {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    .ti-portfolio .bg-img h6, .portfolio .bg-img .ti-button {
+      float: none;
+    }
+  
+    .ti-contact .v-middle {
+      position: relative;
+      padding: 100px 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .mb-sm50 {
+      margin-bottom: 50px;
+    }
+  
+    .mb-sm30 {
+      margin-bottom: 30px;
+    }
+  
+    .ti-heading h4 {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+  
+    .ti-header .caption h4 {
+      font-size: 16px;
+    }
+    .ti-header .caption h1 {
+      font-size: 25px;
+    }
+    .ti-header .caption p {
+      font-size: 14px;
+    }
+  
+    .video-intro h6 {
+      line-height: 2;
+    }
+  
+    .ti-get-ready h6 {
+      line-height: 2;
+    }
+  
+    .ti-portfolio .ti-portfolio-filter span {
+      margin-bottom: 10px;
+    }
+  
+    .ti-blog .ti-blog-item .ti-blog-content h5 {
+      line-height: 1.4;
+    }
+  
+    .ti-footer .ti-social a {
+      margin: 15px 5px;
+      font-size: 16px;
+    }
+    .ti-footer p {
+      line-height: 1.8;
+    }
+  }
+  /* ----------------------------------------------------------------
+    20 End Responsive 
+  -----------------------------------------------------------------*/
