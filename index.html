@@ -891,41 +891,38 @@
                       <h4>Contacto</h4>
                     </div>
 
-                    <form class='form' id='contact-form' method='POST' action='https://formspree.io/mega_unionace@yahoo.com' role='form'>
+                    <form class="form" id="contact-form" method="POST" action="https://formspree.io/mega_unionace@yahoo.com">
                         
-                        <input type='hidden' name='form-name' value='contact-form' />
+                        <input type="hidden" name="form-name" value="contact-form" />
 
                         <div class="messages"></div>
 
                         <div class="controls">
-
                             <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input id="form_name" class="text-white" type="text" name="name" placeholder="Nombre" required="required">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input id="form_email" class="text-white" type="email" name="email" placeholder="Email" required="required">
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                    <input id="form_subject" class="text-white" type="text" name="subject" placeholder="Asunto">
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea id="form_message" class="text-white" name="message" placeholder="Mensaje" rows="4" required="required"></textarea>
+                                </div>
+                              </div>
 
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_name" class="text-white" type="text" name="name" placeholder="Nombre" required="required">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_email" class="text-white" type="email" name="email" placeholder="Email" required="required">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input id="form_subject" class="text-white" type="text" name="subject" placeholder="Asunto">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea id="form_message" class="text-white" name="message" placeholder="Mensaje" rows="4" required="required"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" class="ti-button ti-button-bg"><span>Enviar mensaje</span></button>
-                                </div>
-
+                              <div class="col-md-12 text-center">
+                                <button type="submit" class="ti-button ti-button-bg"><span>Enviar mensaje</span></button>
+                              </div>
                             </div>                             
                         </div>
                     </form>
