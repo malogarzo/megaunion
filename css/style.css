@@ -988,6 +988,18 @@
   .ti-clients .ti-client-logo:hover {
     opacity: 1;
   }
+  .ti-more-clients ol li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px;
+    color: #222222;
+  }
+
+/*  .ti-more-clients ol li + li:before {
+    font-size: 10px;
+    content: " - ";
+  } */
   
   /* ----------------------------------------------------------------
     17 End Clients 
